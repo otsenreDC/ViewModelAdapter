@@ -55,7 +55,9 @@ class HyperCarAdapter :
                     .placeholder(R.drawable.piston_128)
                     .into(dataBinding.thumbnail)
             else
-                dataBinding.thumbnail.setImageDrawable(itemView.context.getDrawable(R.drawable.piston_128))
+                dataBinding
+                    .thumbnail
+                    .setImageDrawable(itemView.context.getDrawable(R.drawable.piston_128))
         }
 
     }

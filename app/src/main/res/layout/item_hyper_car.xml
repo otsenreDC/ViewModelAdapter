@@ -13,10 +13,9 @@
             android:id="@+id/thumbnail"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:contentDescription="@{viewModel.hyperCar.carName}"
+            android:contentDescription="@{viewModel.carName}"
             android:src="@drawable/piston_128"
             app:layout_constraintBottom_toBottomOf="parent"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@{viewModel.hyperCar.carName}"
+            android:text="@{viewModel.carName}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/isFavoriteCheckBox"
             app:layout_constraintStart_toEndOf="@id/thumbnail"
@@ -38,13 +37,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:checked="@={viewModel.hyperCar.favorite}"
+            android:checked="@={viewModel.favorite}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
+
         <variable
             name="viewModel"
             type="io.bananalabs.viewmodeladapter.ui.hyper_cars.HyperCarViewModel" />
